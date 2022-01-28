@@ -8,9 +8,6 @@ const handlerIO = async (req, res) => {
 
 		io.on('connection', (socket) => {
 			socket.broadcast.emit('user connected');
-			socket.on('hello', (msg) => {
-				socket.emit('hello');
-			});
 		});
 		res.socket.server.io = io;
 	} else {

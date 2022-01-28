@@ -18,3 +18,28 @@ a {
 * {
 	box-sizing: border-box;
 }
+
+.my-msg {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	background-color: #2196f3;
+	width: 50%;
+	border-radius: 12px;
+	padding: 1%;
+	color: white;
+	margin: 1%;
+	margin-left: 50%;
+}
+
+.your-msg {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background-color: #6d4c41;
+	width: 50%;
+	border-radius: 12px;
+	padding: 1%;
+	color: white;
+	margin: 1%;
+}

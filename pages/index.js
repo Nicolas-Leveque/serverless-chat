@@ -60,7 +60,19 @@ export default function Home() {
 			</Head>
 			<Header />
 			<div className="flex flex-col w-full h-screen bg-gray-200">
-				<div className="flex-1 p-4">Exemple de chat</div>
+				<div className="flex-1 p-4">
+					{chat.map((chat, idx) => (
+						<div
+							key={idx}
+							className={chat.user === user ? 'my-msg' : 'your-msg'}
+						>
+							<div className="underline">
+								{chat.user === user ? 'Me' : chat.user}
+							</div>
+							<div>{chat.msg}</div>
+						</div>
+					))}
+				</div>
 			</div>
 			<div className="bg-gray-400 p-4 h-20 sticky bottom-0">
 				<div className="flex flex-row flex-1 h-full rounded divide-gray-200 divide-x">
